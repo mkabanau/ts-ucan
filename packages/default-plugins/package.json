@@ -1,11 +1,11 @@
 {
-  "name": "@ucans/default-plugins",
-  "version": "0.11.4",
+  "name": "@mkabanau/default-plugins",
+  "version": "0.11.4-test1",
   "description": "Default UCAN plugin set",
   "author": "Daniel Holmgren <daniel@fission.codes>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ucan-wg/ts-ucan"
+    "url": "https://github.com/mkabanau/ts-ucan"
   },
   "homepage": "https://guide.fission.codes",
   "license": "Apache-2.0",
@@ -66,7 +66,7 @@
   ],
   "dependencies": {
     "@stablelib/ed25519": "^1.0.2",
-    "@ucans/core": "*",
+    "@mkabanau/core": "*",
     "big-integer": "^1.6.51",
     "one-webcrypto": "^1.0.3",
     "uint8arrays": "3.0.0"
@@ -84,5 +84,8 @@
     "ts-jest": "^27.1.4",
     "typescript": "^4.6.3",
     "yarn": "^1.22.18"
+  },
+  "publishConfig": {
+    "@mkabanau:registry": "https://npm.pkg.github.com"
   }
 }

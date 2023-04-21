@@ -1,11 +1,11 @@
 {
-  "name": "@ucans/ucans",
-  "version": "0.11.4",
+  "name": "@mkabanau/ucans",
+  "version": "0.11.4-test1",
   "description": "Typescript implementation of UCANs with default plugins",
   "author": "Daniel Holmgren <daniel@fission.codes>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ucan-wg/ts-ucan"
+    "url": "https://github.com/mkabanau/ts-ucan"
   },
   "homepage": "https://guide.fission.codes",
   "license": "Apache-2.0",
@@ -66,8 +66,8 @@
     "README.md"
   ],
   "dependencies": {
-    "@ucans/core": "*",
-    "@ucans/default-plugins": "*"
+    "@mkabanau/core": "*",
+    "@mkabanau/default-plugins": "*"
   },
   "devDependencies": {
     "@types/jest": "^27.4.1",
@@ -82,5 +82,8 @@
     "ts-jest": "^27.1.4",
     "typescript": "^4.6.3",
     "yarn": "^1.22.18"
+  },
+  "publishConfig": {
+    "@mkabanau:registry": "https://npm.pkg.github.com"
   }
 }

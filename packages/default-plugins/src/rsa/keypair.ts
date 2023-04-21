@@ -3,7 +3,7 @@ import * as uint8arrays from "uint8arrays"
 
 import * as crypto from "./crypto.js"
 import { AvailableCryptoKeyPair, isAvailableCryptoKeyPair } from "../types.js"
-import { DidableKey, Encodings, ExportableKey } from "@ucans/core"
+import { DidableKey, Encodings, ExportableKey } from "@mkabanau/core"
 
 
 export class RsaKeypair implements DidableKey, ExportableKey {

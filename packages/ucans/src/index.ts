@@ -1,8 +1,8 @@
-import * as plugins from "@ucans/default-plugins"
-import * as core from "@ucans/core"
+import * as plugins from "@mkabanau/default-plugins"
+import * as core from "@mkabanau/core"
 
-export * from "@ucans/core"
-export * from "@ucans/default-plugins"
+export * from "@mkabanau/core"
+export * from "@mkabanau/default-plugins"
 
 const injected = core.getPluginInjectedApi(plugins.defaults)
 

@@ -1,4 +1,4 @@
-import { DidKeyPlugin } from "@ucans/core"
+import { DidKeyPlugin } from "@mkabanau/core"
 import * as ed25519 from "@stablelib/ed25519"
 import * as crypto from "./crypto.js"
 

@@ -2,7 +2,7 @@ import * as uint8arrays from "uint8arrays"
 import * as ed25519 from "@stablelib/ed25519"
 import * as crypto from "./crypto.js"
 
-import { DidableKey, Encodings, ExportableKey } from "@ucans/core"
+import { DidableKey, Encodings, ExportableKey } from "@mkabanau/core"
 
 
 export class EdKeypair implements DidableKey, ExportableKey {

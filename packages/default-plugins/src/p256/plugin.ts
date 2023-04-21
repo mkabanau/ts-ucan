@@ -1,4 +1,4 @@
-import { DidKeyPlugin } from "@ucans/core"
+import { DidKeyPlugin } from "@mkabanau/core"
 import * as crypto from "./crypto.js"
 import { P256_DID_PREFIX } from "../prefixes.js"
 

@@ -12,9 +12,10 @@
     "node": ">=15"
   },
   "scripts": {
-    "build": "yarn workspace @ucans/core build && yarn workspace @ucans/default-plugins build && yarn workspace @ucans/ucans build",
-    "test": "yarn workspace @ucans/core test && yarn workspace @ucans/default-plugins test && yarn workspace @ucans/ucans test",
-    "lint": "yarn workspace @ucans/core lint && yarn workspace @ucans/default-plugins lint && yarn workspace @ucans/ucans lint"
+    "build": "yarn workspace @mkabanau/core build && yarn workspace @mkabanau/default-plugins build && yarn workspace @mkabanau/ucans build",
+    "test": "yarn workspace @mkabanau/core test && yarn workspace @mkabanau/default-plugins test && yarn workspace @mkabanau/ucans test",
+    "lint": "yarn workspace @mkabanau/core lint && yarn workspace @mkabanau/default-plugins lint && yarn workspace @mkabanau/ucans lint",
+    "publish": "yarn workspace @mkabanau/core publish-alpha && yarn workspace @mkabanau/default-plugins publish-alpha && yarn workspace @mkabanau/ucans publish-alpha"
   },
   "private": true,
   "workspaces": [

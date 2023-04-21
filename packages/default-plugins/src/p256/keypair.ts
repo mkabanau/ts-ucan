@@ -1,6 +1,6 @@
 import { webcrypto } from "one-webcrypto"
 import * as uint8arrays from "uint8arrays"
-import { DidableKey, Encodings, ExportableKey } from "@ucans/core"
+import { DidableKey, Encodings, ExportableKey } from "@mkabanau/core"
 
 import * as crypto from "./crypto.js"
 import {
