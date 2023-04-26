@@ -163,10 +163,10 @@ export function isUcanPayload(obj: unknown): obj is UcanPayload {
   return util.isRecord(obj)
     && util.hasProp(obj, "iss") && typeof obj.iss === "string"
     && util.hasProp(obj, "aud") && typeof obj.aud === "string"
-    && util.hasProp(obj, "exp") && typeof obj.exp === "number"
+    && util.hasProp(obj, "exp") && (typeof obj.exp === "number" || obj.exp === null)
     && (!util.hasProp(obj, "nbf") || typeof obj.nbf === "number")
     && (!util.hasProp(obj, "nnc") || typeof obj.nnc === "string")
     && util.hasProp(obj, "att") && Array.isArray(obj.att) && obj.att.every(a => isCapability(a) || isEncodedCapability(a))
     && (!util.hasProp(obj, "fct") || Array.isArray(obj.fct) && obj.fct.every(util.isRecord))
-    && util.hasProp(obj, "prf") && Array.isArray(obj.prf) && obj.prf.every(str => typeof str === "string")
+    && (!util.hasProp(obj, "prf") || Array.isArray(obj.prf) && obj.prf.every(str => typeof str === "string"))
 }
