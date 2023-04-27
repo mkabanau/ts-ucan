@@ -1,16 +1,18 @@
 import * as ability from "./ability.js"
 import * as resourcePointer from "./resource-pointer.js"
 import * as util from "../util.js"
+import * as nb from './nb.js'
 
 import { Ability, isAbility } from "./ability.js"
 import { ResourcePointer, isResourcePointer } from "./resource-pointer.js"
 import { Superuser } from "./super-user.js"
+import { NB, isNB } from "./nb.js"
 
 
 // RE-EXPORTS
 
 
-export { ability, resourcePointer, Ability, isAbility }
+export { ability, resourcePointer, Ability, isAbility, NB, isNB }
 
 
 
@@ -20,11 +22,13 @@ export { ability, resourcePointer, Ability, isAbility }
 export type Capability = {
   with: ResourcePointer
   can: Ability
+  nb?: NB
 }
 
 export type EncodedCapability = {
   with: string
   can: string
+  nb?: string
 }
 
 
@@ -100,10 +104,14 @@ export function isEqual(a: Capability, b: Capability): boolean {
  * @param cap The capability to encode
  */
 export function encode(cap: Capability): EncodedCapability {
-  return {
+  let c:EncodedCapability = {
     with: resourcePointer.encode(cap.with),
     can: ability.encode(cap.can)
   }
+  if (cap.nb){
+    c.nb = nb.encode(cap.nb)
+  }
+  return c
 }
 
 /**
@@ -112,8 +120,12 @@ export function encode(cap: Capability): EncodedCapability {
  * @param cap The encoded capability
  */
 export function parse(cap: EncodedCapability): Capability {
-  return {
+  let c:Capability = {
     with: resourcePointer.parse(cap.with),
     can: ability.parse(cap.can)
   }
+  if (cap.nb){
+    c.nb = nb.parse(cap.nb)
+  }
+  return c
 }
