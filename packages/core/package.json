@@ -1,11 +1,11 @@
 {
-  "name": "@mkabanau/core",
+  "name": "@pixi-wallet/core",
   "version": "0.11.4-ext1",
   "description": "Core UCAN implementation",
   "author": "Daniel Holmgren <daniel@fission.codes>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mkabanau/ts-ucan"
+    "url": "https://github.com/pixi-wallet/ts-ucan"
   },
   "homepage": "https://guide.fission.codes",
   "license": "Apache-2.0",
@@ -82,6 +82,6 @@
     "yarn": "^1.22.18"
   },
   "publishConfig": {
-    "@mkabanau:registry": "https://npm.pkg.github.com"
+    "@pixi-wallet:registry": "https://npm.pkg.github.com"
   }
 }

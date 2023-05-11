@@ -17,7 +17,9 @@ jobs:
   build-and-test:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: read
+      packages: write
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -46,8 +48,17 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile --network-concurrency 1
 
-      - name: Build
-        run: yarn build
+      - name: build core
+        run: yarn workspace @pixi-wallet/core publish-alpha
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Test
-        run: yarn publish
+      - name: build default-plugins
+        run: yarn workspace @pixi-wallet/default-plugins publish-alpha
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: build ucans
+        run: yarn workspace @pixi-wallet/ucans publish-alpha
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,11 +1,11 @@
 {
-  "name": "@mkabanau/ucans",
+  "name": "@pixi-wallet/ucans",
   "version": "0.11.4-ext1",
   "description": "Typescript implementation of UCANs with default plugins",
   "author": "Daniel Holmgren <daniel@fission.codes>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mkabanau/ts-ucan"
+    "url": "https://github.com/pixi-wallet/ts-ucan"
   },
   "homepage": "https://guide.fission.codes",
   "license": "Apache-2.0",
@@ -66,8 +66,8 @@
     "README.md"
   ],
   "dependencies": {
-    "@mkabanau/core": "*",
-    "@mkabanau/default-plugins": "*"
+    "@pixi-wallet/core": "*",
+    "@pixi-wallet/default-plugins": "*"
   },
   "devDependencies": {
     "@types/jest": "^27.4.1",
@@ -84,6 +84,6 @@
     "yarn": "^1.22.18"
   },
   "publishConfig": {
-    "@mkabanau:registry": "https://npm.pkg.github.com"
+    "@pixi-wallet:registry": "https://npm.pkg.github.com"
   }
 }
