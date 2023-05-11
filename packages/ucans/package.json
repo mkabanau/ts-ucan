@@ -1,6 +1,6 @@
 {
   "name": "@mkabanau/ucans",
-  "version": "0.11.4-test2",
+  "version": "0.11.4-ext1",
   "description": "Typescript implementation of UCANs with default plugins",
   "author": "Daniel Holmgren <daniel@fission.codes>",
   "repository": {
